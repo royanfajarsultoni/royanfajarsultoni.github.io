@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royan Fajar Sultoni | Portofolio Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display untuk Elegansi, Inter untuk Profesionalisme -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --accent-color: #c5a358; /* Muted Gold / Champagne */
+            --text-main: #f5f5f5;
+            --text-muted: #a1a1aa;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            letter-spacing: -0.01em;
+        }
+
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Subtle Grain Effect untuk tekstur mewah */
+        .grain {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .project-card img {
+            transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .border-premium {
+            border: 1px solid rgba(197, 163, 88, 0.2);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-zinc-800 selection:text-white">
+    <div class="grain"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 mix-blend-difference py-8 px-6 md:px-12 flex justify-between items-center">
+        <a href="#" class="text-xl font-bold tracking-tighter hover:opacity-70 transition-opacity">RFS.</a>
+        <div class="hidden md:flex space-x-12 text-sm uppercase tracking-widest font-medium">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#work" class="nav-link">Work</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <button class="md:hidden">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col justify-center px-6 md:px-24">
+        <span class="text-zinc-500 uppercase tracking-[0.3em] text-xs mb-6 reveal">Creative Developer & Strategist</span>
+        <h1 class="text-6xl md:text-[8rem] serif leading-[0.9] mb-8 reveal">
+            Membangun <br> <span class="italic text-zinc-500">Esensi</span> Digital.
+        </h1>
+        <p class="max-w-xl text-lg text-zinc-400 leading-relaxed reveal" style="transition-delay: 0.2s;">
+            Saya Royan Fajar Sultoni, spesialis dalam menciptakan pengalaman digital yang menggabungkan estetika kontemporer dengan performa yang presisi.
+        </p>
+        <div class="mt-12 reveal" style="transition-delay: 0.4s;">
+            <a href="#work" class="inline-flex items-center space-x-4 group">
+                <span class="text-sm uppercase tracking-widest font-semibold">Lihat Koleksi</span>
+                <span class="w-12 h-12 rounded-full border border-zinc-700 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 px-6 md:px-24 border-t border-zinc-900 bg-zinc-950/30">
+        <div class="grid md:grid-cols-2 gap-16 items-start">
+            <h2 class="text-4xl serif reveal">Filosofi Kerja</h2>
+            <div class="space-y-8 reveal" style="transition-delay: 0.2s;">
+                <p class="text-xl text-zinc-300 leading-relaxed italic">
+                    "Kesederhanaan adalah bentuk kecanggihan yang paling mutakhir."
+                </p>
+                <p class="text-zinc-500 leading-relaxed">
+                    Pendekatan saya dimulai dengan memahami inti dari setiap masalah, kemudian menyaringnya menjadi solusi visual yang jujur dan efisien. Tanpa dekorasi berlebih, hanya fungsi yang dibalut keanggunan.
+                </p>
+                <div class="grid grid-cols-2 gap-8 pt-8 border-t border-zinc-800">
+                    <div>
+                        <h4 class="text-xs uppercase tracking-widest text-zinc-600 mb-2">Layanan</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>UI/UX Design</li>
+                            <li>Brand Identity</li>
+                            <li>Web Development</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xs uppercase tracking-widest text-zinc-600 mb-2">Fokus</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>Minimalism</li>
+                            <li>Performance</li>
+                            <li>Scalability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work/Projects Section -->
+    <section id="work" class="py-32 px-6 md:px-24">
+        <div class="flex justify-between items-end mb-20 reveal">
+            <div>
+                <span class="text-xs uppercase tracking-widest text-zinc-500">Selected Works</span>
+                <h2 class="text-5xl serif mt-4">Karya Pilihan</h2>
+            </div>
+            <p class="text-zinc-500 text-sm hidden md:block">01 — 03</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-24">
+            <!-- Project 1 -->
+            <div class="project-card reveal">
+                <div class="aspect-[4/5] bg-zinc-900 overflow-hidden mb-6">
+                    <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&q=80&w=800" alt="Arsitektur Minimalis" class="w-full h-full object-cover grayscale hover:grayscale-0">
+                </div>
+                <h3 class="text-2xl serif">The Monochrome House</h3>
+                <p class="text-zinc-500 text-sm mt-2 uppercase tracking-widest">Branding • Web Design</p>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card reveal" style="transition-delay: 0.2s;">
+                <div class="aspect-[4/5] bg-zinc-900 overflow-hidden mb-6 md:mt-24">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800" alt="Tech Gadget" class="w-full h-full object-cover grayscale hover:grayscale-0">
+                </div>
+                <h3 class="text-2xl serif">Lumina Tech Systems</h3>
+                <p class="text-zinc-500 text-sm mt-2 uppercase tracking-widest">Interface Design • 2024</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 px-6 md:px-24 text-center">
+        <div class="max-w-3xl mx-auto reveal">
+            <h2 class="text-5xl md:text-7xl serif mb-12">Mari Memulai Sesuatu yang Berarti.</h2>
+            <a href="mailto:hello@royan.com" class="text-2xl md:text-3xl border-b border-zinc-700 pb-2 hover:border-white transition-colors">
+                royanfajar@email.com
+            </a>
+            <div class="flex justify-center space-x-8 mt-20 text-xs uppercase tracking-widest text-zinc-500 font-medium">
+                <a href="#" class="hover:text-white">LinkedIn</a>
+                <a href="#" class="hover:text-white">Instagram</a>
+                <a href="#" class="hover:text-white">Behance</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 md:px-24 border-t border-zinc-900 flex flex-col md:row justify-between items-center text-[10px] uppercase tracking-[0.4em] text-zinc-600">
+        <p>&copy; 2024 Royan Fajar Sultoni</p>
+        <p class="mt-4 md:mt-0 italic">Simplicity is Luxury</p>
+    </footer>
+
+    <script>
+        // Simple Scroll Reveal Logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Initial check for elements in viewport
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.reveal').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    el.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
